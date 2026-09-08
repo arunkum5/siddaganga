@@ -63,6 +63,17 @@
     .brand-text .en{ font-size:10.5px; }
     .brand img{ height:42px; }
     .nav{ padding:14px 16px; gap:8px; }
+    .nav-phone { display: none !important; }
+
+    /* Hero section mobile text reduction (~30%) */
+    .hero .kn-title { font-size: 21px !important; }
+    .hero .hero-subtitle { font-size: 15.5px !important; }
+    .hero h1 { font-size: 31px !important; }
+    .hero p.lead { font-size: 13px !important; }
+    .hero .hero-event-title { font-size: 13.5px !important; }
+    .hero .hero-quote-kn { font-size: 14px !important; }
+    .hero .hero-quote-en { font-size: 17px !important; }
+    .hero .hero-event-desc { font-size: 12px !important; }
   }
   .nav-links{ display:flex; gap:30px; font-size:14.5px; font-weight:600; }
   .nav-links a{ opacity:.8; } .nav-links a:hover{ opacity:1; }
@@ -256,7 +267,7 @@
       <a href="#contact"><span class="lang-kn">ಸಂಪರ್ಕ</span><span class="lang-en">Contact</span></a>
     </nav>
     <div style="display:flex; align-items:center; gap:24px;">
-      <a href="tel:+919945585595" style="display:flex; align-items:center; gap:8px; font-weight:700; font-size:15px; color:var(--maroon-2);">
+      <a href="tel:+919945585595" class="nav-phone" style="display:flex; align-items:center; gap:8px; font-weight:700; font-size:15px; color:var(--maroon-2);">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         +91 99455 85595
       </a>
@@ -272,7 +283,7 @@
 <section class="hero" style="padding-top:0;">
   <div class="hero-inner">
     <span class="kn kn-title">ಶ್ರೀ ಸಿದ್ದಗಂಗಾ ಚಾರಿಟಬಲ್ ಟ್ರಸ್ಟ್ (ನೋಂ)</span>
-    <span class="kn" style="color:var(--gold); font-size:22px; margin-top:4px; display:block; font-weight:600;">ಜಗಜ್ಯೋತಿ ಬಸವೇಶ್ವರರ ಪುತ್ಥಳಿ ಪ್ರತಿಷ್ಠಾನ ಸಮಿತಿ</span>
+    <span class="kn hero-subtitle" style="color:var(--gold); font-size:22px; margin-top:4px; display:block; font-weight:600;">ಜಗಜ್ಯೋತಿ ಬಸವೇಶ್ವರರ ಪುತ್ಥಳಿ ಪ್ರತಿಷ್ಠಾನ ಸಮಿತಿ</span>
     <h1>
       <span class="lang-kn" style="font-size:0.85em; line-height:1.35; display:block;">ಬಸವಣ್ಣನವರ ಹಾದಿಯಲ್ಲಿ, <br><span style="white-space:nowrap;">ಸಿದ್ದಗಂಗಾ ಶ್ರೀಯವರ ಸ್ಫೂರ್ತಿಯೊಂದಿಗೆ</span></span>
       <span class="lang-en">Carrying forward the path of Basavanna, <br>in the spirit of Siddaganga</span>
@@ -283,15 +294,15 @@
     </p>
 
     <div style="background: rgba(201,151,43,0.12); border: 1px solid rgba(227,190,111,0.25); border-radius: 8px; padding: 22px 28px; max-width: 680px; margin: 32px auto 0; text-align: center;">
-      <p style="margin:0; font-size: 19px; color: var(--gold-soft); font-weight: 600; line-height:1.5;">
+      <p class="hero-event-title" style="margin:0; font-size: 19px; color: var(--gold-soft); font-weight: 600; line-height:1.5;">
         <span class="lang-kn">ಪ್ರತಿ ತಿಂಗಳ ಕೊನೆಯ ಭಾನುವಾರ<br>ಶ್ರೀ ಗುರುಬಸವ ನಮನ - ಬಸವ ಭಕ್ತಿ ಮಹೋತ್ಸವ ಮತ್ತು ದಾಸೋಹ ಇರುತ್ತದೆ.</span>
         <span class="lang-en">Last Sunday of every month<br>Sri Gurubasava Namana - Basava Bhakti Mahotsava & Dasoha.</span>
       </p>
-      <p style="margin: 14px 0 0; font-family: 'Noto Serif Kannada', serif; font-size: 20px; font-style: italic; color: var(--ivory);">
+      <p class="hero-quote-kn" style="margin: 14px 0 0; font-family: 'Noto Serif Kannada', serif; font-size: 20px; font-style: italic; color: var(--ivory);">
         <span class="lang-kn">"ಶರಣರ ಬರುವೆಮಗೆ ಪ್ರಾಣ ಜೀವಾಳವಯ್ಯಾ"</span>
-        <span class="lang-en" style="font-family: 'Cormorant Garamond', serif; font-size:24px;">"The arrival of the Sharanas is the very breath of our life"</span>
+        <span class="lang-en hero-quote-en" style="font-family: 'Cormorant Garamond', serif; font-size:24px;">"The arrival of the Sharanas is the very breath of our life"</span>
       </p>
-      <p style="margin: 14px 0 0; font-size: 15.5px; color: rgba(248,241,225,0.85);">
+      <p class="hero-event-desc" style="margin: 14px 0 0; font-size: 15.5px; color: rgba(248,241,225,0.85);">
         <span class="lang-kn">ಭಕ್ತರು ದಾಸೋಹಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು ಇಚ್ಛಿಸುವವರು ದಯವಿಟ್ಟು <a href="#contact" style="color:var(--gold-soft); font-weight:600; text-decoration:underline;">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</a>.</span>
         <span class="lang-en">Devotees willing to support the dasoha are requested to <a href="#contact" style="color:var(--gold-soft); font-weight:600; text-decoration:underline;">contact us</a>.</span>
       </p>
