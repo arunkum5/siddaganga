@@ -3,13 +3,16 @@ import json
 import re
 from PIL import Image
 
+def natural_sort_key(s):
+    return [int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
+
 def process_dir(directory, prefix="img"):
     webp_files = []
     if not os.path.exists(directory):
         print(f"Directory {directory} does not exist.")
         return []
         
-    for i, file in enumerate(sorted(os.listdir(directory))):
+    for i, file in enumerate(sorted(os.listdir(directory), key=natural_sort_key)):
         if file.lower().endswith(('.png', '.jpg', '.jpeg', '.avif')) and not file.endswith('.webp'):
             img_path = os.path.join(directory, file)
             try:
@@ -29,7 +32,7 @@ def process_dir(directory, prefix="img"):
             webp_files.append(file)
             
     webp_files = list(set(webp_files))
-    webp_files.sort()
+    webp_files.sort(key=natural_sort_key)
     return webp_files
 
 trust_dir = '/home/arun/SIDDAGANGA/trust'
@@ -48,7 +51,6 @@ if os.path.exists(index_file):
     js_events = json.dumps(event_files)
     
     # We will look for // --- GALLERY DATA --- and replace everything until // --------------------
-    # We need to make sure we replace it with both arrays.
     
     pattern = r'(// --- GALLERY DATA ---\s*)([\s\S]*?)(\s*// --------------------)'
     
