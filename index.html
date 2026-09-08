@@ -69,8 +69,9 @@
   @media (max-width: 900px){ .nav-links{ display:none; } }
 
   /* ---- Hero ---- */
-  .hero{ background: linear-gradient(180deg, var(--maroon) 0%, var(--maroon-2) 100%); color:var(--ivory); position:relative; overflow:hidden; }
-  .hero-inner{ max-width:var(--max); margin:0 auto; padding:64px 28px 0; display:grid; grid-template-columns:1fr; gap:10px; text-align:center; }
+  .hero{ background: url('puttali.webp') center 15%/cover no-repeat; color:var(--ivory); position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(180deg, rgba(92,23,18,0.85) 0%, rgba(62,15,11,0.95) 100%); z-index:1; }
+  .hero-inner{ max-width:var(--max); margin:0 auto; padding:64px 28px 0; display:grid; grid-template-columns:1fr; gap:10px; text-align:center; position:relative; z-index:2; }
   .hero .kn-title{ font-size:30px; color:var(--gold-soft); }
   .hero h1{ color:var(--ivory); font-size:44px; line-height:1.2; margin-top:14px; max-width:800px; margin-left:auto; margin-right:auto; }
   .hero p.lead{ margin-top:18px; max-width:56ch; margin-left:auto; margin-right:auto; color:rgba(248,241,225,0.82); font-size:17px; }
@@ -79,7 +80,7 @@
     margin-top:46px; border-radius:6px; overflow:hidden;
     display:flex; justify-content:center;
   }
-  .wave{ display:block; width:100%; height:auto; }
+  .wave{ display:block; width:100%; height:auto; position:relative; z-index:2; }
 
   /* ---- Section shell ---- */
   section{ padding:90px 0; }
@@ -96,6 +97,9 @@
   .quote-block span{ display:block; margin-top:10px; font-size:13px; color:var(--ink-soft); font-style:normal; }
 
   /* ---- Seva / objectives ---- */
+  #seva { position: relative; background: url('bg2.webp') center/cover fixed no-repeat; }
+  #seva::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:#F8F1E1; opacity:0.45; z-index:1; pointer-events:none; }
+  #seva .wrap { position: relative; z-index:2; }
   .seva-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
   .seva-card{ padding:36px 28px; background: linear-gradient(145deg, #ffffff 0%, #fdfcf7 60%, #f5eedf 100%); border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,1); border-top:3px solid var(--gold); text-align:center; transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); position:relative; overflow:hidden; }
   .seva-card::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background: radial-gradient(circle at top right, rgba(255,255,255,0.8), transparent 50%); pointer-events:none; }
@@ -108,6 +112,9 @@
   @media (max-width: 620px){ .seva-grid{ grid-template-columns:1fr; } }
 
   /* ---- Events ---- */
+  #events { position: relative; background: url('bg.webp') center/cover fixed no-repeat; }
+  #events::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:#FCF8EF; opacity:0.45; z-index:1; pointer-events:none; }
+  #events .wrap { position: relative; z-index:2; }
   .events-note{ text-align:center; max-width:520px; margin:0 auto 40px; padding:16px 20px; background:rgba(201,151,43,0.1); border-radius:6px; font-size:14.5px; color:var(--ink-soft); }
   .events-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
   .event-card{ border:1px dashed var(--line); border-radius:6px; padding:26px; background:var(--paper); }
@@ -274,6 +281,22 @@
       <span class="lang-kn">ಶಿಕ್ಷಣ, ದಾಸೋಹ ಮತ್ತು ಸಮಾಜ ಸೇವೆಗಾಗಿ ಮೀಸಲಾಗಿರುವ ನೋಂದಾಯಿತ ಚಾರಿಟಬಲ್ ಟ್ರಸ್ಟ್ - 'ಕಾಯಕವೇ ಕೈಲಾಸ' ಎಂಬ ತತ್ವದಡಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆ.</span>
       <span class="lang-en">A registered charitable trust devoted to education, dasoha, and community welfare — rooted in the teaching that <em>kayakave kailasa</em>, work itself is worship.</span>
     </p>
+
+    <div style="background: rgba(201,151,43,0.12); border: 1px solid rgba(227,190,111,0.25); border-radius: 8px; padding: 22px 28px; max-width: 680px; margin: 32px auto 0; text-align: center;">
+      <p style="margin:0; font-size: 19px; color: var(--gold-soft); font-weight: 600; line-height:1.5;">
+        <span class="lang-kn">ಪ್ರತಿ ತಿಂಗಳ ಕೊನೆಯ ಭಾನುವಾರ<br>ಶ್ರೀ ಗುರುಬಸವ ನಮನ - ಬಸವ ಭಕ್ತಿ ಮಹೋತ್ಸವ ಮತ್ತು ದಾಸೋಹ ಇರುತ್ತದೆ.</span>
+        <span class="lang-en">Last Sunday of every month<br>Sri Gurubasava Namana - Basava Bhakti Mahotsava & Dasoha.</span>
+      </p>
+      <p style="margin: 14px 0 0; font-family: 'Noto Serif Kannada', serif; font-size: 20px; font-style: italic; color: var(--ivory);">
+        <span class="lang-kn">"ಶರಣರ ಬರುವೆಮಗೆ ಪ್ರಾಣ ಜೀವಾಳವಯ್ಯಾ"</span>
+        <span class="lang-en" style="font-family: 'Cormorant Garamond', serif; font-size:24px;">"The arrival of the Sharanas is the very breath of our life"</span>
+      </p>
+      <p style="margin: 14px 0 0; font-size: 15.5px; color: rgba(248,241,225,0.85);">
+        <span class="lang-kn">ಭಕ್ತರು ದಾಸೋಹಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು ಇಚ್ಛಿಸುವವರು ದಯವಿಟ್ಟು <a href="#contact" style="color:var(--gold-soft); font-weight:600; text-decoration:underline;">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</a>.</span>
+        <span class="lang-en">Devotees willing to support the dasoha are requested to <a href="#contact" style="color:var(--gold-soft); font-weight:600; text-decoration:underline;">contact us</a>.</span>
+      </p>
+    </div>
+
     <div class="hero-cta">
       <a class="btn btn-gold" href="#donate">
         <span class="lang-kn">ನಮ್ಮ ಸೇವೆಗೆ ಬೆಂಬಲಿಸಿ</span>
@@ -284,21 +307,14 @@
         <span class="lang-en">Learn about the trust</span>
       </a>
     </div>
-    <div class="hero-photo">
-      <img src="puttali.webp" alt="Jagajyothi Basaveshwara Puttali" style="width:100%; max-width:720px; height:auto; border-radius:6px; box-shadow:0 12px 40px rgba(0,0,0,0.3);">
-    </div>
   </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="margin-top:70px;"><path d="M0 40C240 90 480 0 720 30C960 60 1200 10 1440 40V90H0V40Z" fill="#FCF8EF"/></svg>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="margin-top:120px;"><path d="M0 40C240 90 480 0 720 30C960 60 1200 10 1440 40V90H0V40Z" fill="#FCF8EF"/></svg>
 </section>
 
 <!-- ============ ABOUT ============ -->
 <section id="about" style="overflow:hidden; padding-bottom:40px;">
   <div class="wrap">
     <div class="about-head reveal">
-      <span class="eyebrow">
-        <span class="lang-kn">ಟ್ರಸ್ಟ್ ಬಗ್ಗೆ</span>
-        <span class="lang-en">About the trust</span>
-      </span>
       <h2>
         <span class="lang-kn">ನಿಸ್ವಾರ್ಥ ಸೇವೆ</span>
         <span class="lang-en">Service before self</span>
@@ -311,16 +327,6 @@
         <span class="lang-kn">ಅಗತ್ಯವಿರುವ ಮಕ್ಕಳಿಗೆ ಶಿಕ್ಷಣ, ಹಸಿವಿನಿಂದ ಬಳಲುವವರಿಗೆ ದಾಸೋಹ (ಉಚಿತ ಊಟ), ಮತ್ತು ಕಷ್ಟದ ಸಮಯದಲ್ಲಿ ಸಮುದಾಯಕ್ಕೆ ಬೆಂಬಲ ನೀಡುವ ಮೂಲಕ ಆ ಪರಂಪರೆಯನ್ನು ಮುಂದುವರಿಸಲು ಟ್ರಸ್ಟ್ ಶ್ರಮಿಸುತ್ತಿದೆ.</span>
         <span class="lang-en">The trust works to extend that tradition through education for children who need it most, dasoha (food seva) for those who go without, and support for the wider community in times of need.</span>
       </p>
-      <div class="quote-block" style="text-align:left; max-width:640px; margin:36px auto 0;">
-        <p>
-          <span class="lang-kn">"ಕಾಯಕವೇ ಕೈಲಾಸ" — ಕಾಯಕವೇ ಭಗವಂತನ ಸಾಕ್ಷಾತ್ಕಾರದ ಹಾದಿ.</span>
-          <span class="lang-en">"Kayakave Kailasa" — work itself is the path to the divine.</span>
-        </p>
-        <span>
-          <span class="lang-kn">ಬಸವಣ್ಣನವರ ಪ್ರಮುಖ ಬೋಧನೆ, ಟ್ರಸ್ಟ್‌ನ ದೈನಂದಿನ ಕಾರ್ಯಗಳಲ್ಲಿ ಮುಂದುವರಿದಿದೆ.</span>
-          <span class="lang-en">A central teaching of Basavanna, carried forward in the trust's daily work.</span>
-        </span>
-      </div>
     </div>
   </div>
   
@@ -410,23 +416,19 @@
         <span class="lang-en">Upcoming programs</span>
       </h2>
     </div>
-    <div class="events-note">
-      <span class="lang-kn">ಈ ವಿಭಾಗವನ್ನು ಶೀಘ್ರದಲ್ಲೇ ದಿನಾಂಕಗಳೊಂದಿಗೆ ನವೀಕರಿಸಲಾಗುವುದು.</span>
-      <span class="lang-en">This section will be updated with confirmed dates and programs soon. Sample layout shown below.</span>
-    </div>
     <div class="events-grid">
       <div class="event-card">
         <span class="event-date">
-          <span class="lang-kn">ದಿನಾಂಕ ಪ್ರಕಟಿಸಲಾಗುವುದು</span>
-          <span class="lang-en">DATE TO BE ANNOUNCED</span>
+          <span class="lang-kn">ಪ್ರತಿ ತಿಂಗಳ ಕೊನೆಯ ಭಾನುವಾರ</span>
+          <span class="lang-en">LAST SUNDAY OF EVERY MONTH</span>
         </span>
         <h4>
-          <span class="lang-kn">ಬಸವ ಜಯಂತಿ ಆಚರಣೆ</span>
-          <span class="lang-en">Basava Jayanti observance</span>
+          <span class="lang-kn">ಶ್ರೀ ಗುರುಬಸವ ನಮನ - ಬಸವ ಭಕ್ತಿ ಮಹೋತ್ಸವ ಮತ್ತು ದಾಸೋಹ</span>
+          <span class="lang-en">Sri Gurubasava Namana - Basava Bhakti Mahotsava & Dasoha</span>
         </h4>
         <p>
-          <span class="lang-kn">ಸಮುದಾಯ ಸಭೆ ಮತ್ತು ವಚನ ಗಾಯನ - ವಿವರಗಳು ಶೀಘ್ರದಲ್ಲೇ.</span>
-          <span class="lang-en">Community gathering and vachana recitation — details to follow.</span>
+          <span class="lang-kn">ಭಕ್ತರು ದಾಸೋಹಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು ಇಚ್ಛಿಸುವವರು ದಯವಿಟ್ಟು <a href="#contact" style="color:var(--maroon-2); font-weight:600; text-decoration:underline;">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</a>.</span>
+          <span class="lang-en">Devotees willing to support the dasoha are requested to <a href="#contact" style="color:var(--maroon-2); font-weight:600; text-decoration:underline;">contact us</a>.</span>
         </p>
       </div>
       <div class="event-card">
@@ -593,7 +595,7 @@
         </p>
       </div>
       <div class="contact-map">
-        <iframe src="https://maps.google.com/maps?q=SRI%20SIDDAGANGA%20CHARITABLE%20TRUST(R),%20Bengaluru&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; width:100%; min-height:320px;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://maps.google.com/maps?q=12.9974756,77.5503294+(SRI%20SIDDAGANGA%20CHARITABLE%20TRUST)&ll=13.0005,77.5503294&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; width:100%; min-height:320px;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </div>
